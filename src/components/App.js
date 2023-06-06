@@ -1,18 +1,16 @@
+import React from "react";
 import video from "../data/video.js";
+import Comments from "./Comments.js";
+import Liker from "./Liker.js";
+import Content from "./Content.js";
+
 
 function App() {
-  console.log("Here's your data:", video);
-
   return (
     <div className="App">
-      <iframe
-        width="919"
-        height="525"
-        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-        frameBorder="0"
-        allowFullScreen
-        title="Thinking in React"
-      />
+      <Content video={video}/>
+      <Liker video={video}/>
+      <Comments video={video}/>
     </div>
   );
 }
